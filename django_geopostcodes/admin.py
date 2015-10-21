@@ -16,6 +16,16 @@ class LocalityAdmin(admin.OSMGeoAdmin):
                     'region3', 'region4', 'locality', 'postcode', 'suburb',
                     'latitude', 'longitude', 'elevation', 'iso2', 'fips',
                     'nuts', 'hasc', 'stat', 'timezone', 'utc', 'dst']
+    list_filter = ['iso',
+                   'country',
+                   'language',
+                   'timezone',
+                   'utc',
+                   'dst']
+    search_fields = ['iso', 'country', 'language', 'region1', 'region2',
+                    'region3', 'region4', 'locality', 'postcode', 'suburb',
+                    'latitude', 'longitude', 'elevation', 'iso2', 'fips',
+                    'nuts', 'hasc', 'stat', 'timezone', 'utc', 'dst']
 
 admin.site.register(Locality, LocalityAdmin)
 
