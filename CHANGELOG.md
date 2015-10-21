@@ -1,3 +1,10 @@
+# Release 0.1.2 - Wed Oct 21 15:22:58 AEDT 2015
+
+- Fixed verbose names for postcode and suburb.
+- Fixed some landscape code smells and errors.
+- Really moved the badges...
+- Removed pypi badges
+
 # Release 0.1.1 - Wed Oct 21 13:28:45 AEDT 2015
 
 - Switched from coveralls to codecov
