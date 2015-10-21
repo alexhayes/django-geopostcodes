@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 import os
 import sys
-
-import django
-from django.conf import settings
 from django.core.management import execute_from_command_line
 
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_geopostcodes.tests.testapp.settings")
+
 
 def runtests():
     argv = sys.argv[:1] + ['test'] + sys.argv[1:]

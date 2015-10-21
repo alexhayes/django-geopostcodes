@@ -15,9 +15,9 @@ class LocalityQuerySet(GeoQuerySet):
     """
     Locality QuerySet.
     """
-    anything_fields = ['country',
+    anything_fields = ('country',
                        'region1', 'region2', 'region3', 'region4',
-                       'locality', 'postcode', 'suburb']
+                       'locality', 'postcode', 'suburb')
 
     def anything(self, lookup_type, value, fields=anything_fields):
         queries = [models.Q(**{'%s__%s' % (field, lookup_type): value}) for field in fields]
