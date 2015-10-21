@@ -12,18 +12,14 @@ django-geopostcodes
 .. _Coverage Status: https://codecov.io/gh/alexhayes/django-geopostcodes
 .. |Code Status| image:: https://landscape.io/github/alexhayes/django-geopostcodes/master/landscape.png
 .. _Code Status: https://landscape.io/github/alexhayes/django-geopostcodes/
-.. |PyPi version| image:: https://pypip.in/v/django-geopostcodes/badge.png
-.. _PyPi version: https://pypi.python.org/pypi/django-geopostcodes
-.. |PyPi downloads| image:: https://pypip.in/d/django-geopostcodes/badge.png
-.. _PyPi downloads: https://pypi.python.org/pypi/django-geopostcodes
-
-``django-geopostcodes`` supports Python 2.7, 3.3, 3.4 and pypy for Django 1.7 and 1.8.
 
 Django modelling for `geopostcodes.com`_
 
 NOTE: This repository does not include the actual data, you must purchase this
 from `geopostcodes.com`_ and then import it, as per the documentation
 at `django-geopostcodes.readthedocs.org`_
+
+``django-geopostcodes`` supports Python 2.7, 3.3, 3.4 and pypy for Django 1.7 and 1.8.
 
 Docs
 ====
