@@ -1,0 +1,22 @@
+language: python
+sudo: false
+
+install:
+  - pip install tox
+  - pip install coveralls
+
+script:
+  - tox
+
+env:
+  - TOXENV=py27-django17
+  - TOXENV=py27-django18
+  - TOXENV=py33-django17
+  - TOXENV=py33-django18
+  - TOXENV=py34-django17
+  - TOXENV=py34-django18
+  - TOXENV=pypy-django17
+  - TOXENV=pypy-django18
+
+after_success:
+  - coveralls
