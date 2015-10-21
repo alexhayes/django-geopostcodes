@@ -8,8 +8,8 @@ django-geopostcodes
 .. _Build Status: https://travis-ci.org/alexhayes/django-geopostcodes
 .. |Docs Status| image:: https://readthedocs.org/projects/django-geopostcodes/badge/?version=latest
 .. _Docs Status: http://django-geopostcodes.readthedocs.org/en/latest/index.html
-.. |Coverage Status| image:: https://coveralls.io/repos/alexhayes/django-geopostcodes/badge.png?branch=master
-.. _Coverage Status: https://coveralls.io/r/alexhayes/django-geopostcodes?branch=master
+.. |Coverage Status| image:: https://codecov.io/gh/alexhayes/django-geopostcodes/badge.svg
+.. _Coverage Status: https://codecov.io/gh/alexhayes/django-geopostcodes
 .. |Code Status| image:: https://landscape.io/github/alexhayes/django-geopostcodes/master/landscape.png
 .. _Code Status: https://landscape.io/github/alexhayes/django-geopostcodes/
 .. |PyPi version| image:: https://pypip.in/v/django-geopostcodes/badge.png

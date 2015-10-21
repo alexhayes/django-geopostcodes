@@ -1,9 +1,11 @@
 language: python
 sudo: false
 
+before_install:
+  - pip install codecov
+
 install:
   - pip install tox
-  - pip install coveralls
 
 script:
   - tox
@@ -19,4 +21,4 @@ env:
   - TOXENV=pypy-django18
 
 after_success:
-  - coveralls
+  - codecov
