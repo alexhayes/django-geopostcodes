@@ -2,7 +2,7 @@
 django-geopostcodes
 ===================
 
-|Build Status|_ |Docs Status|_ |Coverage Status|_ |Code Status|_ |PyPi version|_ |PyPi downloads|_
+|Build Status|_ |Docs Status|_ |Coverage Status|_ |Code Status|_
 
 .. |Build Status| image:: https://travis-ci.org/alexhayes/django-geopostcodes.png?branch=master
 .. _Build Status: https://travis-ci.org/alexhayes/django-geopostcodes
