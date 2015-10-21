@@ -42,5 +42,9 @@ class Locality(models.Model):
 
     objects = LocalityManager()
 
+    class Meta:
+        verbose_name = _('locality')
+        verbose_name_plural = _('localities')
+
     def __str__(self):
         return self.locality
