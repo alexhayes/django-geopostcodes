@@ -1,3 +1,7 @@
+# Release 0.1.4 - Fri Oct 23 08:35:51 AEDT 2015
+
+- Ensured Sample_GeoPC_AU_Places.csv is installed for testing purposes.
+
 # Release 0.1.3 - Thu Oct 22 13:28:30 AEDT 2015
 
 - Added migration for changes to verbose names for locality, postcode and suburb.
