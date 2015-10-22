@@ -1,3 +1,7 @@
+# Release 0.1.3 - Thu Oct 22 13:28:30 AEDT 2015
+
+- Added migration for changes to verbose names for locality, postcode and suburb.
+
 # Release 0.1.2 - Wed Oct 21 15:22:58 AEDT 2015
 
 - Fixed verbose names for postcode and suburb.
