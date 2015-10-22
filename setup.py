@@ -123,6 +123,8 @@ setup(
     platforms=['any'],
     license='MIT',
     packages=find_packages(exclude=['tests', 'tests.*']),
+    package_dir={'django_geopostcodes': 'django_geopostcodes'},
+    package_data={'django_geopostcodes': ['tests/fixtures/*.csv']},
     zip_safe=False,
     install_requires=install_requires,
     tests_require=tests_require,

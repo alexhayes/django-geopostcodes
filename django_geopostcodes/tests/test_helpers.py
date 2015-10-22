@@ -12,12 +12,16 @@ from ..helpers import import_localities
 from ..models import Locality
 
 
+def create_sample_localities():
+    import_localities(os.path.join(os.path.dirname(__file__),
+                                   'fixtures',
+                                   'Sample_GeoPC_AU_Places.csv'),
+                      "\t")
+
+
 class ImportLocalitiesTestCase(unittest.TestCase):
 
     def test_import_localities(self):
         self.assertEqual(Locality.objects.count(), 0)
-        import_localities(os.path.join(os.path.dirname(__file__),
-                                       'fixtures',
-                                       'Sample_GeoPC_AU_Places.csv'),
-                          "\t")
+        create_sample_localities()
         self.assertEqual(Locality.objects.count(), 100)
