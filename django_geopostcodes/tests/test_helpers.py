@@ -7,7 +7,14 @@
 """
 from __future__ import absolute_import, print_function, unicode_literals
 import os
-from django.utils import unittest
+
+try:
+    # django 1.7
+    from django.utils.unittest import TestCase
+except ImportError:
+    # django 1.8+
+    from django.test import TestCase
+
 from ..helpers import import_localities
 from ..models import Locality
 
@@ -19,7 +26,7 @@ def create_sample_localities():
                       "\t")
 
 
-class ImportLocalitiesTestCase(unittest.TestCase):
+class ImportLocalitiesTestCase(TestCase):
 
     def test_import_localities(self):
         self.assertEqual(Locality.objects.count(), 0)

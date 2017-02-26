@@ -1,2 +1,0 @@
-Django==1.7.8
-django-countries==3.3

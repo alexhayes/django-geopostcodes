@@ -6,8 +6,10 @@
     Import a GeoPostCodes Locality file.
 """
 from __future__ import absolute_import, print_function, unicode_literals
+
 import logging
 from optparse import make_option
+
 from django.core.management.base import BaseCommand, CommandError
 from django_geopostcodes.helpers import import_localities
 from django.utils.translation import ugettext_lazy as _
