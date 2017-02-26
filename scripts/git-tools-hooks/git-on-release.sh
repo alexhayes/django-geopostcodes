@@ -14,7 +14,11 @@ fi
 PY_VERSION=`echo $VERSION | sed -e 's/\./, /g'`
 
 # Replace the version number
-sed --in-place -e "s/VERSION = version_info_t(.*)/VERSION = version_info_t($PY_VERSION, '', '')/g" $INIT_PATH
+sed -i -e "s/VERSION = version_info_t(.*)/VERSION = version_info_t($PY_VERSION, '', '')/g" $INIT_PATH
+
+if [ $? -ne 0 ]; then
+    exit 2
+fi
 
 # Ensure we haven't caused some kind of error
 python $INIT_PATH
