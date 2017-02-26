@@ -26,17 +26,20 @@ extra = {}
 classes = """
     Development Status :: 4 - Beta
     Framework :: Django
-    Framework :: Django :: 1.7
     Framework :: Django :: 1.8
+    Framework :: Django :: 1.9
+    Framework :: Django :: 1.10
+    Framework :: Django :: 1.11
     License :: OSI Approved :: MIT License
     Intended Audience :: Developers
     Programming Language :: Python
     Programming Language :: Python :: 2
-    Programming Language :: Python :: 2.6
     Programming Language :: Python :: 2.7
     Programming Language :: Python :: 3
     Programming Language :: Python :: 3.3
     Programming Language :: Python :: 3.4
+    Programming Language :: Python :: 3.5
+    Programming Language :: Python :: 3.6
     Programming Language :: Python :: Implementation :: CPython
     Programming Language :: Python :: Implementation :: PyPy
     Operating System :: OS Independent

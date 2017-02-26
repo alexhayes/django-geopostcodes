@@ -1,3 +1,8 @@
+# Release 0.2.0 - Sun 26 Feb 2017 23:20:41 AEDT
+
+- Discontinued support for Django 1.7 - now supporting Django 1.8, 1.9 & 1.10.
+- Discontinued support for Python 3.3 - now supporting Python 2.7, 3.4, 3.5 & 3.6.
+
 # Release 0.1.4 - Fri Oct 23 08:35:51 AEDT 2015
 
 - Ensured Sample_GeoPC_AU_Places.csv is installed for testing purposes.
