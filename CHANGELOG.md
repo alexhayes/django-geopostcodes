@@ -1,3 +1,7 @@
+# Release 0.2.1 - Mon 27 Feb 2017 07:38:26 AEDT
+
+- On OSX sed doesn't know about the --in-place argument.
+
 # Release 0.2.0 - Sun 26 Feb 2017 23:20:41 AEDT
 
 - Discontinued support for Django 1.7 - now supporting Django 1.8, 1.9 & 1.10.
