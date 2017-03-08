@@ -1,3 +1,8 @@
+# Release 0.2.2 - Wed  8 Mar 2017 22:28:43 AEDT
+
+- Removed Django 1.11 from troves - it's not a thing yet.
+- Fixed issue in import_locations management command.
+
 # Release 0.2.1 - Mon 27 Feb 2017 07:38:26 AEDT
 
 - On OSX sed doesn't know about the --in-place argument.
