@@ -12,67 +12,13 @@ script:
 
 matrix:
   fast_finish: true
-  allow_failures:
-    # Python 2.7
-    - python: 2.7
-      env: TOXENV=py27-django18
-    - python: 2.7
-      env: TOXENV=py27-django19
-    - python: 2.7
-      env: TOXENV=py27-django110
-    - python: 2.7
-      env: TOXENV=py27-django111
-
-    # Python 3.4
-    - python: 3.4
-      env: TOXENV=py34-django111
-
-    # Python 3.5
-    - python: 3.5
-      env: TOXENV=py35-django111
-
-    # Python 3.6
-    - python: 3.6
-      env: TOXENV=py36-django111
 
   include:
-    # Python 2.7
-    - python: 2.7
-      env: TOXENV=py27-django18
-    - python: 2.7
-      env: TOXENV=py27-django19
-    - python: 2.7
-      env: TOXENV=py27-django110
-    - python: 2.7
-      env: TOXENV=py27-django111
-
-    # Python 3.4
-    - python: 3.4
-      env: TOXENV=py34-django18
-    - python: 3.4
-      env: TOXENV=py34-django19
-    - python: 3.4
-      env: TOXENV=py34-django110
-    - python: 3.4
-      env: TOXENV=py34-django111
-
     # Python 3.5
-    - python: 3.5
-      env: TOXENV=py35-django18
-    - python: 3.5
-      env: TOXENV=py35-django19
-    - python: 3.5
-      env: TOXENV=py35-django110
     - python: 3.5
       env: TOXENV=py35-django111
 
     # Python 3.6
-    - python: 3.6
-      env: TOXENV=py36-django18
-    - python: 3.6
-      env: TOXENV=py36-django19
-    - python: 3.6
-      env: TOXENV=py36-django110
     - python: 3.6
       env: TOXENV=py36-django111
 
