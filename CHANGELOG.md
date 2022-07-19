@@ -1,3 +1,7 @@
+# Release 0.3.0 - Tue Jul 19 21:44:16 AEST 2022
+
+- Bump django-countries to 4.6.2
+
 # Release 0.2.2 - Wed  8 Mar 2017 22:28:43 AEDT
 
 - Removed Django 1.11 from troves - it's not a thing yet.
