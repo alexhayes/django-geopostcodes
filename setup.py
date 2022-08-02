@@ -1,135 +1,49 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
-try:
-    from setuptools import setup, find_packages
-    from setuptools.command.test import test
-    is_setuptools = True
-except ImportError:
-    raise
-    from ez_setup import use_setuptools
-    use_setuptools()
-    from setuptools import setup, find_packages           # noqa
-    from setuptools.command.test import test              # noqa
-    is_setuptools = False
+"""The setup script."""
 
-import os
-import sys
-import codecs
+from setuptools import setup, find_packages
 
-NAME = 'django-geopostcodes'
-entrypoints = {}
-extra = {}
+with open('README.rst') as readme_file:
+    readme = readme_file.read()
 
-# -*- Classifiers -*-
+with open('HISTORY.rst') as history_file:
+    history = history_file.read()
 
-classes = """
-    Development Status :: 4 - Beta
-    Framework :: Django
-    Framework :: Django :: 1.8
-    Framework :: Django :: 1.9
-    Framework :: Django :: 1.10
-    License :: OSI Approved :: MIT License
-    Intended Audience :: Developers
-    Programming Language :: Python
-    Programming Language :: Python :: 2
-    Programming Language :: Python :: 2.7
-    Programming Language :: Python :: 3
-    Programming Language :: Python :: 3.3
-    Programming Language :: Python :: 3.4
-    Programming Language :: Python :: 3.5
-    Programming Language :: Python :: 3.6
-    Programming Language :: Python :: Implementation :: CPython
-    Programming Language :: Python :: Implementation :: PyPy
-    Operating System :: OS Independent
-    Operating System :: POSIX
-    Operating System :: Microsoft :: Windows
-    Operating System :: MacOS :: MacOS X
-"""
-classifiers = [s.strip() for s in classes.split('\n') if s]
+requirements = ['Click>=7.0', ]
 
-# -*- Distribution Meta -*-
-
-import re
-re_meta = re.compile(r'__(\w+?)__\s*=\s*(.*)')
-re_vers = re.compile(r'VERSION\s*=.*?\((.*?)\)')
-re_doc = re.compile(r'^"""(.+?)"""')
-rq = lambda s: s.strip("\"'")
-
-
-def add_default(m):
-    attr_name, attr_value = m.groups()
-    return ((attr_name, rq(attr_value)), )
-
-
-def add_version(m):
-    v = list(map(rq, m.groups()[0].split(', ')))
-    return (('VERSION', '.'.join(v[0:3]) + ''.join(v[3:])), )
-
-
-def add_doc(m):
-    return (('doc', m.groups()[0]), )
-
-pats = {re_meta: add_default,
-        re_vers: add_version,
-        re_doc: add_doc}
-here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'django_geopostcodes/__init__.py')) as meta_fh:
-    meta = {}
-    for line in meta_fh:
-        if line.strip() == '# -eof meta-':
-            break
-        for pattern, handler in pats.items():
-            m = pattern.match(line.strip())
-            if m:
-                meta.update(handler(m))
-
-# -*- Installation Requires -*-
-
-py_version = sys.version_info
-
-
-def strip_comments(l):
-    return l.split('#', 1)[0].strip()
-
-
-def reqs(*f):
-    return [
-        r for r in (
-            strip_comments(l) for l in open(
-                os.path.join(os.getcwd(), 'requirements', *f)).readlines()
-        ) if r]
-
-install_requires = reqs('default.txt')
-
-# -*- Tests Requires -*-
-
-tests_require = reqs('test.txt')
-
-# -*- Long Description -*-
-
-if os.path.exists('README.rst'):
-    long_description = codecs.open('README.rst', 'r', 'utf-8').read()
-else:
-    long_description = 'See http://pypi.python.org/pypi/django-geopostcodes'
-
-# -*- %%% -*-
+test_requirements = ['pytest>=3', ]
 
 setup(
-    name=NAME,
-    version=meta['VERSION'],
-    description=meta['doc'],
-    author=meta['author'],
-    author_email=meta['contact'],
-    url=meta['homepage'],
-    platforms=['any'],
-    license='MIT',
-    packages=find_packages(exclude=['tests', 'tests.*']),
-    package_dir={'django_geopostcodes': 'django_geopostcodes'},
-    package_data={'django_geopostcodes': ['tests/fixtures/*.csv']},
+    author="Alex Hayes",
+    author_email='alex@alution.com',
+    python_requires='>=3.6',
+    classifiers=[
+        'Development Status :: 2 - Pre-Alpha',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Natural Language :: English',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+    ],
+    description="Django modelling for `geopostcodes.com",
+    entry_points={
+        'console_scripts': [
+            'django_geopostcodes=django_geopostcodes.cli:main',
+        ],
+    },
+    install_requires=requirements,
+    license="MIT license",
+    long_description=readme + '\n\n' + history,
+    include_package_data=True,
+    keywords='django_geopostcodes',
+    name='django_geopostcodes',
+    packages=find_packages(include=['django_geopostcodes', 'django_geopostcodes.*']),
+    test_suite='tests',
+    tests_require=test_requirements,
+    url='https://github.com/alexhayes/django_geopostcodes',
+    version='0.2.2',
     zip_safe=False,
-    install_requires=install_requires,
-    tests_require=tests_require,
-    test_suite='runtests.runtests',
-    classifiers=classifiers,
-    long_description=long_description)
+)
