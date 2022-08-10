@@ -122,8 +122,15 @@ class LocalityQuerySetTestCase(unittest.TestCase):
         self.assertEqual(Locality.objects.anything_startswith('28').count(), 76)
 
     def test_chain(self):
-        self.assertEqual(Locality.objects.anything_icontains('Mandurama').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(), 1)
-        self.assertEqual(Locality.objects.anything_icontains('New South').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(), 1)
-        self.assertEqual(Locality.objects.anything_icontains('Panuara').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(), 0)
-
-
+        self.assertEqual(
+            Locality.objects.anything_icontains('Mandurama').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(),
+            1
+        )
+        self.assertEqual(
+            Locality.objects.anything_icontains('New South').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(),
+            1
+        )
+        self.assertEqual(
+            Locality.objects.anything_icontains('Panuara').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(),
+            0
+        )

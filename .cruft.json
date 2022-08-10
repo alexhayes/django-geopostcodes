@@ -8,7 +8,7 @@
       "email": "alex@alution.com",
       "github_username": "alexhayes",
       "project_name": "django-geopostcodes",
-      "project_slug": "django_geopostcodes",
+      "project_slug": "django-geopostcodes",
       "project_short_description": "Django modelling for `geopostcodes.com",
       "pypi_username": "alexhayes",
       "version": "0.2.2",
