@@ -6,7 +6,6 @@ import pytest
 
 from click.testing import CliRunner
 
-from django_geopostcodes import django_geopostcodes
 from django_geopostcodes import cli
 
 

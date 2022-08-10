@@ -10,9 +10,15 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=7.0', ]
+requirements = [
+    'Django>=4.0',
+    'django_countries>=7.3.2',
+]
 
-test_requirements = ['pytest>=3', ]
+test_requirements = [
+    'pytest>=3',
+    'pytest-django>=4.5.2'
+]
 
 setup(
     author="Alex Hayes",

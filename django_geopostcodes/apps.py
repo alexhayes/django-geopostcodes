@@ -11,5 +11,5 @@ from django.apps import AppConfig
 
 class DjangoGeoPostCodesAppConfig(AppConfig):
     name = 'django_geopostcodes'
-    label = 'geopc'
     verbose_name = 'Django GeoPostCodes'
+    default_auto_field = 'django.db.models.AutoField'

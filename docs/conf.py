@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'django-geopostcodes'
-copyright = "2022, Alex Hayes"
+copyright = "2015, Alex Hayes"
 author = "Alex Hayes"
 
 # The version info for the project you're documenting, acts as replacement
