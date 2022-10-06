@@ -22,10 +22,9 @@ script:
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
-  user: alexhayes
+  skip_existing: true
+  username: "__token__"
   password:
     secure: T67euAYO01EfjYMzYz/Oflp1FylYRUjzPgqaFpyHMnOd7BIzd/vAOwTFXwv2BBNaiLlaGLdOUPYOwmq0uKVOcGnzuri+OotPcYnu/LFpRpfqxVHo3ked0vNqVL/KEjuYgdi/DOxFn9MTBaOWbgVpCNK40jcGrXJVqpmH2tioj/jm/0wv6Bl54ZK7jlG+svuE/crrFTJ3Xpb40m310wgsWU8C/6AUr0yPE3bZ9eXouloe5ODGQNmbX/zPVoS5ux1G5dTnHioYrBLVk9hi2snoNRUivLJ6SHce6UXFKA73wz25JSHKMYR/dj2vuEaY28jQhg6qJouh5REWW4AZPtnfh9EvGybeKGL1XyqHmWc+IUSrkFL1Iytfb83ntUna1jXIxM3mv5DcaCgCTflCsJchomWjCFVkwRa3wg1nq7jIvdwlGuUT2rP17hzpv/aKYVrytt9LiH0fkuA/mk2L/P5kIfev3GwzHQCgK73Ynse+gOk6owaZ3snS7kpqPBoJaCsRdD5Z+bloyoKeZ7zefXB0y51HfD2FQsfMnHAJhQhoP7YEn/3gyt88s8Y24v/bqWmNilAAI3JTIWfLEzkYYaLyotjYwmoiesp72OZTApGAEt0LWcy9vZECsSGQ+Y5/nyApZvC1Jgtc5KZSpa4rTzcSRt4ArVhVM3+U1mG+T0sNhEo=
   on:
     tags: true
-    repo: alexhayes/django-geopostcodes
-    python: 3.8
