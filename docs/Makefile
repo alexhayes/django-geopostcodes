@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = django_geopostcodes
+SPHINXPROJ    = django-geopostcodes
 SOURCEDIR     = .
 BUILDDIR      = _build
 

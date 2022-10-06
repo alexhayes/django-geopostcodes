@@ -2,7 +2,12 @@
 History
 =======
 
-0.3.0 (2022-10-96)
+0.3.1 (2022-10-06)
+------------------
+
+* Fix incorrect references to `django_geopostcodes` to `django-geopostcodes`.
+
+0.3.0 (2022-10-06)
 ------------------
 
 * Dropped support for Python < 3.8

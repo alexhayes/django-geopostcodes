@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=django_geopostcodes
+set SPHINXPROJ=django-geopostcodes
 
 if "%1" == "" goto help
 

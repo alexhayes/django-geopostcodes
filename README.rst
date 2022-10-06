@@ -3,11 +3,11 @@ django-geopostcodes
 ===================
 
 
-.. image:: https://img.shields.io/pypi/v/django_geopostcodes.svg
-        :target: https://pypi.python.org/pypi/django_geopostcodes
+.. image:: https://img.shields.io/pypi/v/django-geopostcodes.svg
+        :target: https://pypi.python.org/pypi/django-geopostcodes
 
-.. image:: https://img.shields.io/travis/alexhayes/django_geopostcodes.svg
-        :target: https://travis-ci.com/alexhayes/django_geopostcodes
+.. image:: https://img.shields.io/travis/alexhayes/django-geopostcodes.svg
+        :target: https://travis-ci.com/alexhayes/django-geopostcodes
 
 .. image:: https://readthedocs.org/projects/django-geopostcodes/badge/?version=latest
         :target: https://django-geopostcodes.readthedocs.io/en/latest/?version=latest

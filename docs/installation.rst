@@ -12,7 +12,7 @@ To install django-geopostcodes, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install django_geopostcodes
+    $ pip install django-geopostcodes
 
 This is the preferred method to install django-geopostcodes, as it will always install the most recent stable release.
 
@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/alexhayes/django_geopostcodes
+    $ git clone git://github.com/alexhayes/django-geopostcodes
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/alexhayes/django_geopostcodes/tarball/master
+    $ curl -OJL https://github.com/alexhayes/django-geopostcodes/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,8 +47,8 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/alexhayes/django_geopostcodes
-.. _tarball: https://github.com/alexhayes/django_geopostcodes/tarball/master
+.. _Github repo: https://github.com/alexhayes/django-geopostcodes
+.. _tarball: https://github.com/alexhayes/django-geopostcodes/tarball/master
 
 Django Settings
 ---------------

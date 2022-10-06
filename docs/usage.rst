@@ -4,7 +4,7 @@ Usage
 
 To use django-geopostcodes in a project::
 
-    import django_geopostcodes
+    import django-geopostcodes
 
 Locality
 --------
@@ -19,7 +19,7 @@ You can query for localities as follows;
 
 .. code-block:: python
 
-    from django_geopostcodes.models import Locality
+    from django-geopostcodes.models import Locality
     from django.contrib.gis.measure import D
 
     # Find a locality by post code
