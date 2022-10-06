@@ -12,10 +12,13 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 # Django replaces this, but it still wants it. *shrugs*
 DATABASES = {
     'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.spatialite',
-        'NAME': ':memory:',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': os.environ.get('TEST_DB_NAME', 'django_geopostcodes_test'),
     }
 }
+
+if os.environ.get('TEST_DB_USER', None):
+    DATABASES['default']['USER'] = os.environ.get('TEST_DB_USER')
 
 INSTALLED_APPS = (
     'django.contrib.auth',
