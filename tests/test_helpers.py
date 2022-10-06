@@ -8,15 +8,9 @@
 from __future__ import absolute_import, print_function, unicode_literals
 import os
 
-try:
-    # django 1.7
-    from django.utils.unittest import TestCase
-except ImportError:
-    # django 1.8+
-    from django.test import TestCase
-
-from ..helpers import import_localities
-from ..models import Locality
+from django.test import TestCase
+from django_geopostcodes.helpers import import_localities
+from django_geopostcodes.models import Locality
 
 
 def create_sample_localities():

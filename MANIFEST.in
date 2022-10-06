@@ -1,13 +1,11 @@
-include CHANGELOG.md
+include AUTHORS.rst
+include CONTRIBUTING.rst
+include HISTORY.rst
 include LICENSE
 include README.rst
-include MANIFEST.in
-include setup.cfg
-include setup.py
-recursive-include django_geopostcodes *.py
-recursive-include django_geopostcodes *.csv
-recursive-include docs *
-recursive-include requirements *.txt
-recursive-include scripts/ *
-prune *.pyc
-prune *.sw*
+
+recursive-include tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif

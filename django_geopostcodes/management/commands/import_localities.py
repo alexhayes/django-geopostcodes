@@ -11,7 +11,7 @@ import logging
 
 from django.core.management.base import BaseCommand
 from django_geopostcodes.helpers import import_localities
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 logger = logging.getLogger('console.' + __name__)

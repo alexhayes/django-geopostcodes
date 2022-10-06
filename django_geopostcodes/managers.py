@@ -6,12 +6,13 @@
     Django model managers for django-geopostcodes.
 """
 from __future__ import absolute_import, print_function, unicode_literals
-from django.contrib.gis.db.models.query import GeoQuerySet
+
+from django.db.models import QuerySet
 from django.db.models.manager import Manager
 from django.contrib.gis.db import models
 
 
-class LocalityQuerySet(GeoQuerySet):
+class LocalityQuerySet(QuerySet):
     """
     Locality QuerySet.
     """

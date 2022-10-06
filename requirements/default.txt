@@ -1,1 +1,1 @@
-django-countries==4.6.2
+django-countries==7.3.2

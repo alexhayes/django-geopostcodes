@@ -1,3 +1,11 @@
-coverage==3.7.1
-detox==0.10.0
-tox==2.1.1
+-r default.txt
+-r pkgutils.txt
+
+watchdog==2.1.9
+flake8==5.0.4
+tox==3.25.1
+coverage==4.5.4
+pytest==7.1.2
+black==22.6.0
+psycopg2==2.9.3
+pytest-django==4.5.2

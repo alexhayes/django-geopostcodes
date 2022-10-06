@@ -8,11 +8,16 @@
 from __future__ import absolute_import, print_function, unicode_literals
 import os
 import unittest
+
+import pytest
 from django.contrib.gis.geos import Point
+from django.contrib.gis.measure import D
+
 from django_geopostcodes.helpers import import_localities
-from ..models import Locality
+from django_geopostcodes.models import Locality
 
 
+@pytest.mark.django_db()
 class LocalityQuerySetTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -21,11 +26,23 @@ class LocalityQuerySetTestCase(unittest.TestCase):
                                        'Sample_GeoPC_AU_Places.csv'),
                           "\t")
 
-    def test_distance(self):
+    def test_count(self):
         self.assertEqual(Locality.objects.count(), 100)
+
+    def test_point_equal(self):
         self.assertEqual(Locality.objects.filter(point=Point(149.075273, -33.648855)).count(), 1)
-        self.assertEqual(Locality.objects.filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(), 1)
-        self.assertEqual(Locality.objects.filter(point__distance_lte=(Point(149.075273, -33.648855), 0.2)).count(), 5)
+
+    def test_distance_one_cm(self):
+        self.assertEqual(Locality.objects.filter(point__distance_lte=(Point(149.075273, -33.648855), D(cm=1))).count(), 1)
+
+    def test_distance_one_km(self):
+        self.assertEqual(Locality.objects.filter(point__distance_lte=(Point(149.075273, -33.648855), D(cm=1))).count(), 1)
+
+    def test_distance_one_hundred_km(self):
+        self.assertEqual(Locality.objects.filter(point__distance_lte=(Point(149.075273, -33.648855), D(km=20))).count(), 5)
+        print(
+            Locality.objects.filter(point__distance_lte=(Point(149.075273, -33.648855), D(km=20)))
+        )
 
     def test_anything_contains(self):
         self.assertEqual(Locality.objects.count(), 100)
@@ -105,8 +122,15 @@ class LocalityQuerySetTestCase(unittest.TestCase):
         self.assertEqual(Locality.objects.anything_startswith('28').count(), 76)
 
     def test_chain(self):
-        self.assertEqual(Locality.objects.anything_icontains('Mandurama').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(), 1)
-        self.assertEqual(Locality.objects.anything_icontains('New South').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(), 1)
-        self.assertEqual(Locality.objects.anything_icontains('Panuara').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(), 0)
-
-
+        self.assertEqual(
+            Locality.objects.anything_icontains('Mandurama').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(),
+            1
+        )
+        self.assertEqual(
+            Locality.objects.anything_icontains('New South').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(),
+            1
+        )
+        self.assertEqual(
+            Locality.objects.anything_icontains('Panuara').filter(point__distance_lte=(Point(149.075273, -33.648855), 0.00001)).count(),
+            0
+        )

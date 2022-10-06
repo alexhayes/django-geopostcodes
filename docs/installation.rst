@@ -1,21 +1,57 @@
+.. highlight:: shell
+
 ============
 Installation
 ============
 
-You can install django-geopostcodes either via the Python Package Index (PyPI)
-or from github.
 
-To install using pip;
+Stable release
+--------------
 
-.. code-block:: bash
+To install django-geopostcodes, run this command in your terminal:
+
+.. code-block:: console
 
     $ pip install django-geopostcodes
 
-From github;
+This is the preferred method to install django-geopostcodes, as it will always install the most recent stable release.
 
-.. code-block:: bash
+If you don't have `pip`_ installed, this `Python installation guide`_ can guide
+you through the process.
 
-    $ pip install git+https://github.com/alexhayes/django-geopostcodes.git
+.. _pip: https://pip.pypa.io
+.. _Python installation guide: http://docs.python-guide.org/en/latest/starting/installation/
+
+
+From sources
+------------
+
+The sources for django-geopostcodes can be downloaded from the `Github repo`_.
+
+You can either clone the public repository:
+
+.. code-block:: console
+
+    $ git clone git://github.com/alexhayes/django-geopostcodes
+
+Or download the `tarball`_:
+
+.. code-block:: console
+
+    $ curl -OJL https://github.com/alexhayes/django-geopostcodes/tarball/master
+
+Once you have a copy of the source, you can install it with:
+
+.. code-block:: console
+
+    $ python setup.py install
+
+
+.. _Github repo: https://github.com/alexhayes/django-geopostcodes
+.. _tarball: https://github.com/alexhayes/django-geopostcodes/tarball/master
+
+Django Settings
+---------------
 
 Then place ``django_geopostcodes`` in your ``INSTALLED_APPS``;
 
@@ -28,8 +64,8 @@ Then place ``django_geopostcodes`` in your ``INSTALLED_APPS``;
     )
 
 
-Import
-======
+Data Import
+-----------
 
 django-geopostcodes by itself only provides models and helpers, you must
 purchase and import the geo post code data from `geopostcodes.com`_.

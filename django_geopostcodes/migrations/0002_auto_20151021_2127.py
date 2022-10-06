@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('geopc', '0001_initial'),
+        ('django_geopostcodes', '0001_initial'),
     ]
 
     operations = [
