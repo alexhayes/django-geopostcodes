@@ -4,8 +4,13 @@ language: python
 dist: jammy
 python:
   - '3.10'
-  - '3.9'
   - '3.8'
+
+  # For some reason setuptools fails on Python 3.9 on travis - so turning 3.9 off for now.
+  # See https://app.travis-ci.com/github/alexhayes/django-geopostcodes/jobs/584887053#L570
+  # See https://github.com/pypa/setuptools/issues/3560
+  # See https://github.com/pypa/pip/issues/6264
+  # - '3.9'
 
 services:
   - postgresql
