@@ -49,3 +49,44 @@ Once you have a copy of the source, you can install it with:
 
 .. _Github repo: https://github.com/alexhayes/django_geopostcodes
 .. _tarball: https://github.com/alexhayes/django_geopostcodes/tarball/master
+
+Django Settings
+---------------
+
+Then place ``django_geopostcodes`` in your ``INSTALLED_APPS``;
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...
+        'django_geopostcodes',
+        ...
+    )
+
+
+Data Import
+-----------
+
+django-geopostcodes by itself only provides models and helpers, you must
+purchase and import the geo post code data from `geopostcodes.com`_.
+
+Upon purchase from `geopostcodes.com`_ you will be able to down a zip file that
+contains files that can be imported into django-geopostcodes.
+
+Currently django-geopostcodes only supports localities, however feel free to
+fork and add support for regions and businesses.
+
+Once you've completed your purchase from `geopostcodes.com`_ you will be able
+to download a ZIP file containing data in a number of formats. Inside the ZIP
+file there should be a folder called ``CSV`` and within this folder should be a
+file titled ``GeoPC_XX_Places.csv`` where ``XX`` is the two letter ISO country
+code.
+
+You can import this file into django-geopostcodes as follows;
+
+.. code-block:: bash
+
+    python manage.py import_localities /path/to/GeoPC_XX_Places.csv
+
+
+.. _geopostcodes.com: http://www.geopostcodes.com

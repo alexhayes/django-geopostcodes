@@ -13,25 +13,18 @@ django-geopostcodes
         :target: https://django-geopostcodes.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
 
+Django modelling for GeoPostcodes_
 
-
-
-Django modelling for `geopostcodes.com
-
+NOTE: This repository does not include the actual data, you must purchase this from geopostcodes.com and then import it, as per the documentation at django-geopostcodes.readthedocs.org
 
 * Free software: MIT license
 * Documentation: https://django-geopostcodes.readthedocs.io.
-
-
-Features
---------
-
-* TODO
 
 Credits
 -------
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
+.. _GeoPostcodes: https://www.geopostcodes.com/
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
